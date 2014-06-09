@@ -1,0 +1,40 @@
+{
+  "name": "telepathdb",
+  "version": "0.0.1",
+  "description": "p2p database using pouchdb and telepathine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "p2p",
+    "db",
+    "database",
+    "pouch",
+    "pouchdb",
+    "couchdb",
+    "couch",
+    "database",
+    "peer",
+    "distributed",
+    "share",
+    "replication",
+    "replicating",
+    "replicate",
+    "memory"
+  ],
+  "dependencies": {
+	"express-pouchdb": "",
+	"memdown": "",
+	"lodash": "",
+	"telepathine": "automenta/telepathine",
+	"express": "4.x",
+	"pouchdb": "pouchdb/pouchdb",
+   	"corser": "~1.2.0",
+   	"couchdb-harness": "*",
+   	"mkdirp": "^0.5.0",
+   	"optimist": "~0.3.5"
+  },
+  "author": "SeH",
+  "license": "AGPL"
+}
