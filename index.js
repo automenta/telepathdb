@@ -104,10 +104,16 @@ process.on('SIGINT', function () {
 
 var network = "netention";
 var database = network || "main";
+var port = 10000;
 
 var T = new(require('telepathine').Telepathine)(
-	10000, [], {
-		network: network
+	port, [ /* seeds */ ], {
+		network: network,
+		address: "24.131.65.218",
+		addressMap: {
+        	"192.168.0.102": "24.131.65.218",
+            "127.0.0.1":     "24.131.65.218"
+        }
 	}
 );
 
@@ -154,9 +160,11 @@ new PouchDB(database, function (err, db) {
 			}
 			
 		});
-	});
-		
+	});		
+	
 	T.on('set', function (peer, k, v) {
+		//console.log('recv', peer, k, v);
+		
 		if (peer == T.peer_name) return;
 		
 		if (!(typeof v == "object")) {
